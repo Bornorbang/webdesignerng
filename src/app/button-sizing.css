@@ -1,0 +1,51 @@
+/* Only content buttons that previously stretched across their container. */
+.auth-form > button,
+.profile-form > button,
+.change-password-form > button,
+.contact-layout form > button,
+.consultation-form-wrap form > button,
+.course-purchase > button,
+.course-purchase > .primary-button,
+.pricing-card > a,
+.payment-result .primary-button,
+.payment-result .secondary-button,
+.course-affiliate .primary-button {
+  width: max-content !important;
+  min-width: 0 !important;
+  max-width: 100%;
+  flex: 0 0 auto;
+  align-self: flex-start;
+  justify-self: start !important;
+}
+
+.auth-form > button,
+.profile-form > button,
+.change-password-form > button,
+.contact-layout form > button,
+.consultation-form-wrap form > button,
+.course-purchase > button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.pricing-card > a {
+  max-width: calc(100% - 56px);
+}
+
+@media (max-width: 560px) {
+  .auth-form > button,
+  .profile-form > button,
+  .change-password-form > button,
+  .contact-layout form > button,
+  .consultation-form-wrap form > button,
+  .course-purchase > button,
+  .course-purchase > .primary-button,
+  .payment-result .primary-button,
+  .payment-result .secondary-button,
+  .course-affiliate .primary-button {
+    width: max-content !important;
+    justify-self: start !important;
+  }
+}

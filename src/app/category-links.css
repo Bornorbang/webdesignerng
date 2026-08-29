@@ -1,0 +1,13 @@
+.blog-detail-aside > section:first-child > a {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-top: 1px solid #e7e3e0;
+  color: #5f5a5c;
+  font-size: .68rem;
+  text-decoration: none;
+}
+
+.blog-detail-aside > section:first-child > a:hover {
+  color: #e32631;
+}

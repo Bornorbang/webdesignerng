@@ -1,0 +1,3 @@
+"use client";
+import{useState}from"react";import{api,getToken}from"@/lib/api";
+export default function HelpfulReviewButton({id,count,initial}:{id:number;count:number;initial:boolean}){const[value,setValue]=useState(count),[helpful,setHelpful]=useState(initial),[busy,setBusy]=useState(false);async function toggle(){if(!getToken())return;setBusy(true);try{const result=await api<{helpful_count:number;is_helpful:boolean}>(`/reviews/${id}/helpful`,{method:"POST"});setValue(result.helpful_count);setHelpful(result.is_helpful)}finally{setBusy(false)}}return <button type="button" className={helpful?"review-helpful active":"review-helpful"} onClick={toggle} disabled={busy||!getToken()} aria-pressed={helpful}>Helpful{value>0?` (${value})`:""}</button>}

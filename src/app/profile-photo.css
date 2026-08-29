@@ -1,0 +1,13 @@
+.profile-photo-remove {
+  width: auto;
+  min-height: 40px;
+  padding: 10px 14px;
+  border: 0;
+  background: #e32631;
+  color: #fff;
+  font: inherit;
+  font-size: .68rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+.profile-photo-remove:disabled { opacity: .55; cursor: wait; }

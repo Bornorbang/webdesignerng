@@ -1,0 +1,98 @@
+/* Shared action shape. Width and layout remain controlled by each component. */
+button,
+.primary-button,
+.secondary-button,
+.nav-cta,
+.pricing-card > a,
+.course-signup-button,
+.cd-whatsapp-community,
+.cd-socials a,
+.cd-play-lesson,
+.profile-photo span,
+.profile-signout,
+.auth-form button,
+.profile-form button,
+.consultation-form button,
+.contact-form button,
+.resource-cta a,
+.course-affiliate a,
+.legal-help a,
+.lesson-video a {
+  border-radius: 0 !important;
+}
+
+/* Page-content actions that previously used a black fill now use WDN red. */
+.pricing-section .pricing-card > a,
+.pricing-section .pricing-card.featured > a,
+.profile-form button,
+.auth-form button,
+.consultation-form button,
+.contact-form button,
+.lesson-video a,
+.legal-help .primary-button,
+.resource-light .primary-button,
+.course-catalogue .primary-button {
+  border-color: #e32631 !important;
+  background: #e32631 !important;
+  color: #fff !important;
+  box-shadow: none;
+}
+
+.pricing-section .pricing-card > a:hover,
+.profile-form button:hover,
+.auth-form button:hover,
+.consultation-form button:hover,
+.contact-form button:hover,
+.lesson-video a:hover {
+  border-color: #c91d29 !important;
+  background: #c91d29 !important;
+  color: #fff !important;
+}
+
+.contact-page .contact-submit {
+  width: max-content !important;
+  min-width: 0 !important;
+  height: auto !important;
+  justify-self: start;
+  padding: 13px 19px !important;
+  border: 0 !important;
+  background: #e32631 !important;
+  background-image: none !important;
+  color: #fff !important;
+  box-shadow: none !important;
+  font-size: .72rem;
+  line-height: 1.2;
+}
+
+.contact-page .contact-submit:hover {
+  background: #c91d29 !important;
+}
+
+.contact-page .contact-paths article > a {
+  width: auto !important;
+  min-width: 0 !important;
+  height: auto !important;
+  padding: 18px 0 0 !important;
+  border: 0 !important;
+  border-top: 1px solid #ddd9d5 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: #171717 !important;
+  box-shadow: none !important;
+  text-transform: none;
+}
+
+.contact-page .contact-paths article:nth-child(2) > a {
+  border-top-color: #373337 !important;
+  color: #fff !important;
+}
+
+.contact-page .contact-paths article > a:hover {
+  background: transparent !important;
+  color: #e32631 !important;
+  transform: none;
+}
+
+.course-grid > .course-card-link{display:block;color:inherit;text-decoration:none}.course-grid > .course-card-link article{height:100%}.course-card-eyebrow{display:flex;align-items:center;justify-content:space-between;gap:12px}.course-card-eyebrow>p{margin:0;color:#e32631;text-transform:uppercase;letter-spacing:.1em;font-size:.62rem;font-weight:800}.course-card-eyebrow>span{color:#817b7e;font-size:.62rem}.course-card-summary{display:-webkit-box;overflow:hidden;min-height:38px;margin:-10px 0 18px;color:#6e696b;font-size:.72rem;line-height:1.65;-webkit-box-orient:vertical;-webkit-line-clamp:2}.course-card-foot>span{color:#e32631;font-size:.7rem;font-weight:800}.course-card-foot>span b{margin-left:5px}.course-grid>.course-card-link:hover article{transform:translateY(-6px);box-shadow:0 18px 45px rgba(28,22,20,.1)}.course-detail-page .cd-instructor-head img,.course-detail-page .cd-instructor-avatar{width:60px;height:60px;flex-basis:60px}.course-detail-page .cd-instructor-avatar{font-size:1.2rem}
+.course-grid .course-card-body{padding:19px 20px}.course-grid .course-card-body h2{min-height:auto;margin:8px 0 14px}.course-grid .course-card-summary{min-height:34px;margin:0 0 14px;line-height:1.55}.course-grid .course-meta{flex-wrap:wrap;gap:6px}.course-grid .course-meta span{padding:6px 8px}.course-grid .course-card-foot{margin-top:18px;padding-top:15px}.course-card-enrolled{color:#168647!important}.course-card-enrol{color:#e32631!important}.course-detail-page .cd-lesson.has-video{cursor:pointer;transition:background .18s}.course-detail-page .cd-lesson.has-video:hover{background:#fff4f5}.course-detail-page .cd-lesson.has-video:focus-visible{outline:2px solid #e32631;outline-offset:-2px}.course-detail-page .cd-resource-button svg{width:15px;height:15px}
+.course-grid .course-card-body>p.course-card-summary{color:#6e696b;font-size:.72rem;font-weight:400;letter-spacing:0;text-transform:none}.course-grid .course-meta span{border:1px solid #e32631;background:#e32631;color:#fff}

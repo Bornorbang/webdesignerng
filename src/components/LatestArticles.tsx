@@ -1,0 +1,4 @@
+import Link from"next/link";import{BlogPost,blogUrl,excerpt,postDate}from"@/lib/blog";
+const API=(process.env.NEXT_PUBLIC_API_URL??"http://localhost:8000/api").replace(/\/$/,"");
+async function recent(){try{const response=await fetch(`${API}/blogs/recent?limit=3`,{next:{revalidate:3600}});if(!response.ok)return[];return((await response.json())as{posts:BlogPost[]}).posts??[]}catch{return[]}}
+export default async function LatestArticles(){const posts=await recent();if(!posts.length)return <div className="home-article-empty">Recent articles are being loaded.</div>;return <>{posts.map((post,index)=><article key={post.id}><span>{String(index+1).padStart(2,"0")} / {post.category.name}</span><h3>{post.title}</h3><p>{excerpt(post,130)}</p><small>{postDate(post.published_at)} · {post.author}</small><Link href={blogUrl(post)}>Read article <b>→</b></Link></article>)}</>}

@@ -1,0 +1,3 @@
+@media(min-width:701px){.blog-detail-hero h1{font-size:clamp(2.35rem,4.25vw,4.15rem)}}
+.site-footer a[href="/book-consultation/"],.topbar a[href="/book-consultation/"]{font-size:0}.site-footer a[href="/book-consultation/"]::after,.topbar a[href="/book-consultation/"]::after{content:"Book Consultation";font-size:.7rem}.topbar a[href="/book-consultation/"]::after{font-size:.72rem}
+.faq .faq-list details>p a{color:#e32631;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}.faq .faq-list details>p a:hover{color:#b91521}

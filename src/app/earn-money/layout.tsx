@@ -1,0 +1,5 @@
+import type { ReactNode } from "react";
+const pageUrl="https://www.websitedesigner.ng/earn-money/";
+const programmeSchema={"@context":"https://schema.org","@type":"Service",name:"Website Designer Nigeria Tech Courses Affiliate Program",description:"An affiliate programme that pays 30% commission on qualifying technology course purchases.",url:pageUrl,provider:{"@id":"https://www.websitedesigner.ng/#organization"},areaServed:{"@type":"Country",name:"Nigeria"},offers:{"@type":"Offer",price:"0",priceCurrency:"NGN",description:"Free affiliate programme registration"}};
+const breadcrumbSchema={"@context":"https://schema.org","@type":"BreadcrumbList",itemListElement:[{"@type":"ListItem",position:1,name:"Home",item:"https://www.websitedesigner.ng/"},{"@type":"ListItem",position:2,name:"Tech Courses Affiliate Program",item:pageUrl}]};
+export default function EarnMoneyLayout({children}:{children:ReactNode}){return <><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(programmeSchema)}}/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(breadcrumbSchema)}}/>{children}</>}

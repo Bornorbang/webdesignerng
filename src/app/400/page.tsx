@@ -1,0 +1,1 @@
+import type{Metadata}from"next";import StatusPage from"@/components/StatusPage";export const metadata:Metadata={title:'400 - Bad Request',robots:{index:false,follow:false}};export default function Page(){return <StatusPage code={400}/>}

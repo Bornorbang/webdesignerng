@@ -1,0 +1,8 @@
+"use client";
+import Link from "next/link";
+import {useEffect,useState} from "react";
+import {api} from "@/lib/api";
+type Course={id:number;title:string;slug:string;short_description:string|null;thumbnail:string|null;price:string;is_free:boolean;level:string;lectures_count:number;category:{name:string}};type Page={data:Course[];last_page:number};
+const image=(path:string)=>/^https?:/.test(path)?path:`${process.env.NEXT_PUBLIC_LEGACY_MEDIA_URL??"http://127.0.0.1:8010/media"}/${path.replace(/^\/?(media\/)?/,"")}`;
+export default function CourseCategoryFeed({slug}:{slug:string}){const[data,setData]=useState<Course[]|null>(null);useEffect(()=>{let active=true;(async()=>{try{const first=await api<Page>(`/courses?category=${encodeURIComponent(slug)}&page=1`);const rest=await Promise.all(Array.from({length:Math.max(0,first.last_page-1)},(_,index)=>api<Page>(`/courses?category=${encodeURIComponent(slug)}&page=${index+2}`)));if(active)setData([...(first.data??[]),...rest.flatMap(result=>result.data??[])])}catch{if(active)setData([])}})();return()=>{active=false}},[slug]);if(!data)return <p className="collection-state">Loading coursesâ€¦</p>;if(!data.length)return <p className="collection-state">No published courses are available in this category yet.</p>;return <div className="collection-grid">{data.map(course=><Link href={`/course/${course.slug}/`} key={course.id}><div className="collection-image">{course.thumbnail&&<img src={image(course.thumbnail)} alt={course.title}/>}<span>{course.category.name}</span></div><small>{course.level} Â· {course.lectures_count} lessons</small><h2>{course.title}</h2><p>{course.short_description}</p><b>{course.is_free?"Start free":`Enroll for â‚¦${Number(course.price).toLocaleString("en-NG")}`} â†’</b></Link>)}</div>}
+

@@ -1,0 +1,3 @@
+"use client";
+import Link from"next/link";import{useEffect,useState}from"react";import{api}from"@/lib/api";import{BlogCategory}from"@/lib/blog";
+export default function BlogCategoryList(){const[data,setData]=useState<BlogCategory[]|null>(null);useEffect(()=>{api<{categories:BlogCategory[]}>('/blog-categories').then(r=>setData(r.categories)).catch(()=>setData([]))},[]);if(!data)return <p className="collection-state">Loading categories…</p>;return <div className="category-grid">{data.map((item,index)=><Link href={`/categories/${item.slug}/`} key={item.id}><span>{String(index+1).padStart(2,'0')}</span><h2>{item.name}</h2><p>{item.blogs_count??0} published articles</p><b>Explore category →</b></Link>)}</div>}

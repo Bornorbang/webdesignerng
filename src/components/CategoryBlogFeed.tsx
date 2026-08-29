@@ -1,0 +1,7 @@
+"use client";
+import Link from "next/link";
+import {useEffect,useState} from "react";
+import {api} from "@/lib/api";
+import {BlogPost,blogUrl,excerpt,mediaUrl,postDate} from "@/lib/blog";
+type Page={data:BlogPost[];last_page:number};
+export default function CategoryBlogFeed({slug}:{slug:string}){const[posts,setPosts]=useState<BlogPost[]|null>(null);useEffect(()=>{let active=true;(async()=>{try{const first=await api<{posts:Page}>(`/blogs?category=${encodeURIComponent(slug)}&page=1`);const rest=await Promise.all(Array.from({length:Math.max(0,first.posts.last_page-1)},(_,index)=>api<{posts:Page}>(`/blogs?category=${encodeURIComponent(slug)}&page=${index+2}`)));if(active)setPosts([...(first.posts.data??[]),...rest.flatMap(result=>result.posts.data??[])])}catch{if(active)setPosts([])}})();return()=>{active=false}},[slug]);if(!posts)return <p className="collection-state">Loading articles…</p>;if(!posts.length)return <p className="collection-state">No published articles are available in this category yet.</p>;return <div className="collection-grid">{posts.map(post=><Link href={blogUrl(post)} key={post.id}><div className="collection-image">{post.image&&<img src={mediaUrl(post.image)} alt={post.title}/>}<span>{post.category.name}</span></div><small>{postDate(post.published_at)} · {post.comments_count} comments</small><h2>{post.title}</h2><p>{excerpt(post)}</p><b>Read article →</b></Link>)}</div>}

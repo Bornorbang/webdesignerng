@@ -1,0 +1,12 @@
+"use client";
+import Link from "next/link";
+import {FormEvent,useState} from "react";
+import {useRouter} from "next/navigation";
+import {ensureReferralId} from "@/components/AffiliateTracker";
+import {api,ApiError,storeToken} from "@/lib/api";
+
+export default function SignupForm(){
+ const router=useRouter(),[error,setError]=useState(""),[busy,setBusy]=useState(false);
+ async function submit(event:FormEvent<HTMLFormElement>){event.preventDefault();setBusy(true);setError("");const form=new FormData(event.currentTarget);try{const referralId=await ensureReferralId();const result=await api<{token:string}>("/auth/register",{method:"POST",body:JSON.stringify({first_name:form.get("first_name"),last_name:form.get("last_name"),username:form.get("username"),email:form.get("email"),phone_number:form.get("phone_number"),password:form.get("password"),password_confirmation:form.get("password_confirmation"),referral_id:referralId,terms:true,device_name:"WDN website"})});storeToken(result.token,true);const next=new URLSearchParams(window.location.search).get("next");router.replace(next?.startsWith("/")&&!next.startsWith("//")?next:"/profile/")}catch(exception){setError(exception instanceof ApiError?Object.values(exception.errors).flat()[0]??exception.message:"Unable to create your account.")}finally{setBusy(false)}}
+ return <form className="auth-form auth-signup" onSubmit={submit}>{error&&<p className="form-message form-error full-field" role="alert">{error}</p>}<label>First Name<input name="first_name" autoComplete="given-name" required/></label><label>Last Name<input name="last_name" autoComplete="family-name" required/></label><label>Username<input name="username" autoComplete="username" required/></label><label>Email Address<input type="email" name="email" autoComplete="email" required/></label><label>Phone Number<input type="tel" name="phone_number" autoComplete="tel" pattern="\+?[0-9]{9,15}" required/></label><label>Password<input type="password" name="password" autoComplete="new-password" minLength={8} required/></label><label>Confirm Password<input type="password" name="password_confirmation" autoComplete="new-password" minLength={8} required/></label><label className="auth-check full-field"><input type="checkbox" required/> I agree to the <Link href="/terms-of-service/">Terms of Service</Link> and <Link href="/privacy-policy/">Privacy Policy</Link>.</label><button type="submit" disabled={busy}>{busy?"Creating account…":"Create Account"}<span>→</span></button></form>
+}
