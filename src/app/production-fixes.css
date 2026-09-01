@@ -3,6 +3,15 @@
   gap: 30px;
 }
 
+.enrollment-success-toast { position:fixed;z-index:220;top:88px;right:22px;display:grid;grid-template-columns:34px minmax(0,1fr) 24px;align-items:center;gap:11px;width:min(390px,calc(100vw - 30px));border-left:4px solid #20a464;padding:15px 14px;background:#fff;color:#171717;box-shadow:0 16px 45px rgba(0,0,0,.22);animation:enrollment-toast-in .28s ease both }
+.enrollment-success-toast>span { display:grid;width:34px;height:34px;place-items:center;border-radius:50%;background:#20a464;color:#fff;font-weight:900 }
+.enrollment-success-toast strong,.enrollment-success-toast small { display:block }
+.enrollment-success-toast strong { font-size:14px }
+.enrollment-success-toast small { margin-top:3px;color:#6d686b;font-size:11px;line-height:1.45 }
+.enrollment-success-toast button { border:0;padding:0;background:transparent;color:#777;font-size:20px;cursor:pointer }
+@keyframes enrollment-toast-in { from { transform:translateX(24px);opacity:0 } }
+@media (max-width:700px) { .enrollment-success-toast { top:76px;right:15px } }
+
 /* Homepage articles now lead with the featured image supplied by the blog API. */
 .article-grid .home-article-image {
   position: relative;
