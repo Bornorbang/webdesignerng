@@ -22,6 +22,7 @@ import "./category-links.css";
 import "./profile-photo.css";
 import "./graphic-design.css";
 import "./font-fallback.css";
+import "./production-fixes.css";
 
 export const metadata:Metadata={metadataBase:new URL("https://www.websitedesigner.ng"),title:{default:"Website Designer Nigeria",template:"%s - Website Designer Nigeria"},description:"Conversion-focused web design, ecommerce and digital growth services in Nigeria.",icons:{icon:[{url:"/images/WDN-favicon.png",type:"image/png"}],shortcut:"/images/WDN-favicon.png",apple:"/images/WDN-favicon.png"}};
 
