@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { api } from "@/lib/api";
 import SiteMobileMenu from "@/components/SiteMobileMenu";
 import SiteIntegrations from "@/components/SiteIntegrations";
+import PaymentResultToast from "@/components/PaymentResultToast";
 
 export const AFFILIATE_REFERRAL_KEY = "wdn_affiliate_referral";
 
@@ -44,5 +45,5 @@ export default function AffiliateTracker() {
   useEffect(() => {
     void ensureReferralId();
   }, []);
-  return <><SiteIntegrations/><SiteMobileMenu/></>;
+  return <><SiteIntegrations/><SiteMobileMenu/><PaymentResultToast/></>;
 }
