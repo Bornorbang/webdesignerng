@@ -2,3 +2,30 @@
   padding: 15px 36px !important;
   gap: 30px;
 }
+
+/* Homepage articles now lead with the featured image supplied by the blog API. */
+.article-grid .home-article-image {
+  position: relative;
+  display: block;
+  height: 190px;
+  margin: -25px -25px 20px;
+  overflow: hidden;
+  background: #dedbd6;
+}
+.article-grid .home-article-image img {
+  object-fit: cover;
+  transition: transform .4s ease;
+}
+.article-grid article:hover .home-article-image img { transform: scale(1.035); }
+.article-grid article h3 { margin: 18px 0 10px; }
+.article-grid article small { margin-top: 14px; color: #878285; font-size: 10px; }
+
+@media (max-width: 700px) {
+  .site-footer h3 { font-size: 12px !important; }
+  .site-footer p,
+  .site-footer a { font-size: 12px !important; line-height: 1.65; }
+  .site-footer .footer-bottom p,
+  .site-footer .footer-bottom a,
+  .site-footer .footer-bottom span { font-size: 11px !important; }
+  .article-grid .home-article-image { height: 210px; }
+}

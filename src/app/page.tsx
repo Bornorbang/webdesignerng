@@ -89,7 +89,7 @@ function ProjectPanel({ className, image, label }: { className: string; image: s
   return (
     <div className={`floating-panel ${className}`}>
       <div className="panel-bar"><span>{label}</span><span>•••</span></div>
-      <div className="panel-image"><Image src={image} alt={`${label} website design portfolio project`} fill sizes="360px" /></div>
+      <div className="panel-image"><Image src={image} alt={`${label} portfolio project by a web design company in Lagos`} fill sizes="360px" /></div>
     </div>
   );
 }
