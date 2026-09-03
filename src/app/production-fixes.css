@@ -42,6 +42,8 @@
   .site-footer h3 { font-size: 12px !important; }
   .site-footer p,
   .site-footer a { font-size: 12px !important; line-height: 1.65; }
+  .site-footer a[href="/book-consultation/"] { font-size: 0 !important; }
+  .site-footer a[href="/book-consultation/"]::after { font-size: 12px !important; }
   .site-footer .footer-bottom p,
   .site-footer .footer-bottom a,
   .site-footer .footer-bottom span { font-size: 11px !important; }
