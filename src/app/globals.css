@@ -191,14 +191,14 @@ nav a.active::after { content: ""; position: absolute; bottom: 16px; left: 50%; 
 .service-footer { border-top:1px solid #252225;padding:35px 0;background:#070707}.service-footer .shell{display:grid;grid-template-columns:1fr auto auto;align-items:center;gap:40px}.service-footer img{width:auto;height:37px}.service-footer p{margin:0;color:#777278;font-size:11px}.service-footer div div{display:flex;gap:22px}.service-footer a{color:#9a959b;font-size:11px}.service-footer a:hover{color:#fff}
 
 @media (max-width: 1250px) {
-  nav { gap: 24px; }
+  .topbar nav { gap: 24px; }
   .floating-panel { opacity: .36; }
   .panel-top-left { left: -170px; } .panel-bottom-left { left: -70px; } .panel-top-right { right: -170px; } .panel-bottom-right { right: -70px; }
 }
 @media (max-width: 900px) {
   .shell { width: min(calc(100% - 32px), 1500px); }
   .nav-shell { grid-template-columns: 1fr auto; }
-  nav { display: none; }
+  .topbar .nav-shell > nav { display: none; }
   .hero { min-height: 1070px; }
   .hero-copy { min-height: 670px; }
   .floating-panel { opacity: .42; }
