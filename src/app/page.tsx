@@ -5,7 +5,7 @@ import LatestArticles from "@/components/LatestArticles";
 
 export const metadata: Metadata = {
   title: { absolute: "Website Designer Nigeria - Best Web Designers in Nigeria" },
-  description: "Website Designer Nigeria is a leading web design company in Lagos providing conversion-focused website development services for businesses across Nigeria.",
+  description: "Website Designer Nigeria is a leading web design company in Lagos providing professional web development services. We are the best web designers in Nigeria.",
   keywords: ["Website Designer Nigeria", "Best Web Designers in Nigeria", "Web Design Company in Lagos", "Website Development Services", "Web Design Agency in Nigeria"],
   alternates: { canonical: "/" },
   robots: { index: true, follow: true },
@@ -124,8 +124,8 @@ export default function Home() {
 
         <div className="hero-copy shell">
           <p className="kicker">Web Design &amp; Digital Growth Agency in Nigeria</p>
-          <h1>Website Designer Nigeria<br /><span>Built for Business Growth</span></h1>
-          <p className="hero-description">We design high-performance websites, ecommerce stores and digital<br className="desktop-only" /> growth systems that help Nigerian businesses <strong>grow online and win more.</strong></p>
+          <h1>Website Designer Nigeria<br /><span>Best Web Designers in Nigeria</span></h1>
+          <p className="hero-description">We are a web design company in Lagos designing high-performance websites, ecommerce stores and digital<br className="desktop-only" /> growth systems that help Nigerian businesses <strong>grow online and win more.</strong></p>
           <div className="hero-actions"><a className="primary-button" href="https://wa.me/2347075876888" target="_blank" rel="noreferrer">Start Your Project <Arrow /></a><Link className="secondary-button" href="/portfolio/">View Our Work <Arrow /></Link></div>
         </div>
 
@@ -174,7 +174,7 @@ export default function Home() {
       <section className="contact" id="contact"><div className="shell"><p className="section-label">Have a project in mind?</p><h2>Let&apos;s build something<br /><span>that wins online.</span></h2><a className="primary-button" href="https://wa.me/2347075876888" target="_blank" rel="noreferrer">Start Your Project <Arrow /></a></div></section>
       <footer className="site-footer">
         <div className="shell footer-grid">
-          <div className="footer-company"><Link href="/"><Image src="/images/brand/footer-logo.png" alt="Website Designer Nigeria logo" width={210} height={48} /></Link><p>Website Designer Nigeria is a leading web design company in Lagos providing conversion-focused website development services for businesses across Nigeria.</p><div className="social-links"><a href="https://x.com/webdesignerng" target="_blank" rel="noreferrer" aria-label="X"><SocialIcon name="x" /></a><a href="https://www.tiktok.com/@websitedesigner.ng" target="_blank" rel="noreferrer" aria-label="TikTok"><SocialIcon name="tiktok" /></a><a href="https://www.instagram.com/websitedesigner_ng" target="_blank" rel="noreferrer" aria-label="Instagram"><SocialIcon name="instagram" /></a><a href="https://www.youtube.com/@websitedesignerng" target="_blank" rel="noreferrer" aria-label="YouTube"><SocialIcon name="youtube" /></a><a href="https://www.linkedin.com/company/website-designer-nigeria/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><SocialIcon name="linkedin" /></a></div></div>
+          <div className="footer-company"><Link href="/"><Image src="/images/brand/footer-logo.png" alt="Website Designer Nigeria logo" width={210} height={48} /></Link><p>Website Designer Nigeria is a leading web design company in Lagos providing professional web development services. We are the best web designers in Nigeria.</p><div className="social-links"><a href="https://x.com/webdesignerng" target="_blank" rel="noreferrer" aria-label="X"><SocialIcon name="x" /></a><a href="https://www.tiktok.com/@websitedesigner.ng" target="_blank" rel="noreferrer" aria-label="TikTok"><SocialIcon name="tiktok" /></a><a href="https://www.instagram.com/websitedesigner_ng" target="_blank" rel="noreferrer" aria-label="Instagram"><SocialIcon name="instagram" /></a><a href="https://www.youtube.com/@websitedesignerng" target="_blank" rel="noreferrer" aria-label="YouTube"><SocialIcon name="youtube" /></a><a href="https://www.linkedin.com/company/website-designer-nigeria/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><SocialIcon name="linkedin" /></a></div></div>
           <div><h3>Quick Links</h3><Link href="/tech-courses/">Courses</Link><Link href="/portfolio/">Portfolio</Link><Link href="/book-consultation/">Book Consultation</Link><Link href="/earn-money/">Affiliate Program</Link><a href="https://hostingnigeria.com">Domain &amp; Hosting</a><a href="http://www.tempnumber.ng" target="_blank" rel="noreferrer">Temporary Number</a><Link href="/contact-website-designer-nigeria/">Contact Us</Link></div>
           <div><h3>Our Services</h3><Link href="/web-development-pricing/">Web Development</Link><Link href="/ecommerce-website-design-in-nigeria/">Ecommerce Design</Link><Link href="/mobile-app-development-in-nigeria/">Mobile App Development</Link><Link href="/shopify-store-pricing/">Shopify Design</Link><Link href="/seo-pricing/">SEO</Link><Link href="/social-media-management-pricing/">SM Management</Link></div>
           <div><h3>Contact Info</h3><a href="https://wa.me/2347075876888">07075876888</a><a href="mailto:contact@websitedesigner.ng">contact@websitedesigner.ng</a></div>
