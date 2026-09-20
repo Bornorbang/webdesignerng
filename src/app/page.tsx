@@ -125,7 +125,7 @@ export default function Home() {
         <div className="hero-copy shell">
           <p className="kicker">Web Design &amp; Digital Growth Agency in Nigeria</p>
           <h1>Website Designer Nigeria<br /><span>Best Web Designers in Nigeria</span></h1>
-          <p className="hero-description">We are a web design company in Lagos designing high-performance websites, ecommerce stores and digital<br className="desktop-only" /> growth systems that help Nigerian businesses <strong>grow online and win more.</strong></p>
+          <p className="hero-description">We are a web design company in Lagos providing professional web development services that help businesses <strong>grow online and win more.</strong></p>
           <div className="hero-actions"><a className="primary-button" href="https://wa.me/2347075876888" target="_blank" rel="noreferrer">Start Your Project <Arrow /></a><Link className="secondary-button" href="/portfolio/">View Our Work <Arrow /></Link></div>
         </div>
 
